@@ -13,6 +13,7 @@ gem 'byebug'
       gem 'pry'
 gem 'faker'
 gem "will_paginate"
+gem 'bootstrap-will_paginate'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 

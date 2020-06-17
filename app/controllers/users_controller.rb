@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: [:index, :edit, :update]
+  before_action :correct_user,   only: [:edit, :update]
+
+  def index
+    @users = User.paginate(page: params[:page], :per_page => 10)
+  end
 
   def show
     @user = User.find(params[:id])
@@ -14,7 +20,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome to Twitterio!"
-      redirect_to @user
+      redirect_to root_url
     else
       render 'new'
     end
