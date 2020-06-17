@@ -6,6 +6,13 @@ ruby '2.6.5'
 gem 'apipie-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
+gem 'bootstrap-sass'
+gem 'annotate'
+gem 'bcrypt'
+gem 'byebug'
+      gem 'pry'
+gem 'faker'
+gem "will_paginate"
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 
